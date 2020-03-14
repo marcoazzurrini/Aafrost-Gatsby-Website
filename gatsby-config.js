@@ -6,6 +6,9 @@
 var proxy = require("http-proxy-middleware")
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: `https://www.aafrost.co.uk/`,
+  },
   plugins: [
     `gatsby-plugin-emotion`,
     `gatsby-plugin-react-helmet`,
@@ -22,6 +25,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
+    `gatsby-plugin-sitemap`,
   ],
   developMiddleware: app => {
     app.use(
