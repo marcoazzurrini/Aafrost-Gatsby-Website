@@ -8,6 +8,12 @@ const Quote = styled.div`
   margin-top: ${props => props.theme.pm.pm400};
   padding: 5rem;
   background: #f3f9fc;
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    padding: ${props => props.theme.pm.pm100};
+    margin-top: 0;
+  }
 `
 
 const QuoteHeader = styled.div`
@@ -29,6 +35,11 @@ const QuoteForm = styled.form`
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `
 
 const QuoteInput = styled.input`
@@ -42,6 +53,13 @@ const QuoteInput = styled.input`
   padding: ${props => props.theme.pm.pm100};
   display: inline-block;
   width: 45%;
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: ${props => props.theme.pm.pm200};
+  }
 `
 const QuoteTextArea = styled.textarea`
   background: transparent;
@@ -55,6 +73,11 @@ const QuoteTextArea = styled.textarea`
   border: none;
   border-bottom: 1px solid ${props => props.theme.colors.grey100};
   margin: ${props => props.theme.pm.pm300} 0;
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    margin-top: ${props => props.theme.pm.pm100};
+  }
 `
 
 const Info = styled.img`
@@ -71,10 +94,7 @@ export default function quote() {
 
       <QuoteForm>
         <QuoteInput placeholder="Your email address" />
-        <QuoteInput
-          placeholder="Your telephone number"
-          style={{ marginLeft: "10%" }}
-        />
+        <QuoteInput placeholder="Your telephone number" />
         <QuoteTextArea placeholder="Message" />
         <BtnMedium type="submit">Submit</BtnMedium>
       </QuoteForm>

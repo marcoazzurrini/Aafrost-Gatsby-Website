@@ -11,7 +11,7 @@ const Services = styled.div`
 
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
-    padding-top: ${props => props.theme.pm.pm400};
+    padding-top: ${props => props.theme.pm.pm300};
   }
 `
 
@@ -21,6 +21,11 @@ const ServiceContent = styled.div`
   align-items: center;
   flex-direction: ${props => (props.reverse ? "row-reverse" : "row")};
   margin-bottom: ${props => props.theme.pm.pm300};
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    flex-direction: column;
+  }
 `
 const ServiceDescription = styled.p`
   width: 60%;
@@ -30,6 +35,12 @@ const ServiceDescription = styled.p`
     margin-bottom: ${props => props.theme.pm.pm200};
     color: ${props => props.theme.colors.grey300};
     line-height: 1.5;
+  }
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    width: 100%;
+    padding: 0;
   }
 `
 
@@ -43,6 +54,11 @@ const ServiceDetails = styled.ul`
 
 const ServiceImage = styled.img`
   width: 40%;
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    width: 100%;
+  }
 `
 
 export default function services() {
@@ -76,7 +92,7 @@ export default function services() {
       </ServiceDetails>
 
       <HeadingSecondary>
-        Refrigeration <span>Services</span>
+        Air <span>Conditioning</span>
       </HeadingSecondary>
       <SectionHero>A collection of some my best projects.</SectionHero>
       <ServiceContent reverse>

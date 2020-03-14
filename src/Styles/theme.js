@@ -23,11 +23,12 @@ export const theme = {
   text: {
     headingPrimary: "72px",
     headingSecondary: "56px",
+    bodyXl: "34px",
     bodyLarge: "24px",
     bodyMedium: "16px",
     bodySmall: "14px",
   },
   breakpoints: {
-    mobile: "800px",
+    mobile: "1200px",
   },
 }

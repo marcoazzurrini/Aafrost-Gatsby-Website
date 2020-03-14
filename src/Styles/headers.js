@@ -23,4 +23,9 @@ export const HeadingSecondary = styled.h3`
   span {
     color: ${props => props.theme.colors.primary};
   }
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    font-size: ${props => props.theme.text.bodyXl};
+  }
 `

@@ -9,7 +9,7 @@ export const SectionHero = styled.p`
   }
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
-    font-size: ${props => props.theme.text.bodyMedium};
+    font-size: ${props => props.theme.text.bodyLarge};
     margin-bottom: ${props => props.theme.pm.pm300};
   }
 `
