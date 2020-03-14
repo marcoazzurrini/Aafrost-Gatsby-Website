@@ -54,7 +54,7 @@ export default function header() {
         Your realiable,
         <span> air-conditioning & refrigeration engineer.</span>
       </SectionHero>
-      <BtnMedium>Get a Quote</BtnMedium>
+      <BtnMedium href="#quote">Get a Quote</BtnMedium>
       <ChevronDown href="#work">
         <img src={Chevron} alt="scroll down" />
       </ChevronDown>

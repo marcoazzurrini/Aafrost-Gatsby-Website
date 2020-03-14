@@ -1,6 +1,6 @@
 import styled from "@emotion/styled"
 
-export const BtnMedium = styled.button`
+export const BtnMedium = styled.a`
   background: ${props => props.theme.colors.primary};
   padding: ${props => props.theme.pm.pm100} ${props => props.theme.pm.pm200};
   color: #fff;

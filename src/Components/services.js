@@ -47,7 +47,7 @@ const ServiceImage = styled.img`
 
 export default function services() {
   return (
-    <Services>
+    <Services id="services">
       <HeadingSecondary>
         Refrigeration <span>Services</span>
       </HeadingSecondary>

@@ -63,7 +63,7 @@ const Info = styled.img`
 
 export default function quote() {
   return (
-    <Quote>
+    <Quote id="quote">
       <QuoteHeader>
         <Info src={InfoSVG} alt="info" />
         <QuoteTitle>Get a Quote</QuoteTitle>

@@ -62,8 +62,8 @@ export default function MainNav() {
         </Logo>
         <NavbarMenu>
           <NavbarMenuItem>
-            <NavbarMenuLink href="#work" primary>
-              My Work
+            <NavbarMenuLink href="#services" primary>
+              Services
             </NavbarMenuLink>
           </NavbarMenuItem>
           <NavbarMenuItem>
