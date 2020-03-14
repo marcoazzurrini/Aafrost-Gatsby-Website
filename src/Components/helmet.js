@@ -5,10 +5,10 @@ export default function helmet(props) {
   return (
     <Helmet>
       <html lang="en" />
-      <title>Marco Azzurrini | Frontend Web Developer</title>
+      <title>AaFrost | Refrigeration & Air Conditioning engineers.</title>
       <meta
         name="description"
-        content="Hi, I'm Marco, a passionate frontend web developer, specializing in JavaScript, React and Redux."
+        content="AaFrost, the leading refrigeration and air conditioning servicing company in central London."
       />
       <meta charset="utf-8" />
       <meta name="author" content="Marco Azzurrini" />
