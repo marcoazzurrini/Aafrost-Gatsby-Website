@@ -1,5 +1,5 @@
 import React from "react"
-import Chevron from "../img/chevron-down.png"
+import Chevron from "../img/chevronDown.png"
 import styled from "@emotion/styled"
 import { HeadingPrimary } from "../Styles/headers"
 import { SectionHero } from "../Styles/text"
