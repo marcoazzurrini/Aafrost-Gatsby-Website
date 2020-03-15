@@ -10,7 +10,7 @@ const Navbar = styled.nav`
   height: ${props => props.theme.sizes.navbarH};
   background: #fff;
   z-index: 5;
-
+  box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
     display: none;

@@ -11,7 +11,7 @@ const Services = styled.div`
 
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
-    padding-top: ${props => props.theme.pm.pm300};
+    padding-top: 0;
   }
 `
 
@@ -49,6 +49,11 @@ const ServiceDetails = styled.ul`
   li {
     margin-bottom: ${props => props.theme.pm.pm300};
     color: ${props => props.theme.colors.grey400};
+  }
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    margin-bottom: ${props => props.theme.pm.pm300};
   }
 `
 

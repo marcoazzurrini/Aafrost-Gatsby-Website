@@ -11,7 +11,7 @@ export const HeadingPrimary = styled.h1`
   }
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
-    font-size: ${props => props.theme.text.headingSecondary};
+    font-size: ${props => props.theme.text.headingTertiary};
   }
 `
 

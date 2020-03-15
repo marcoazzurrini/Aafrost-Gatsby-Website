@@ -15,7 +15,7 @@ export const theme = {
     pm500: "250px",
   },
   sizes: {
-    navbarH: "60px",
+    navbarH: "75px",
     aboutW: "800px",
     myWorkW: "1200px",
     headerW: "800px",
@@ -23,8 +23,10 @@ export const theme = {
   text: {
     headingPrimary: "72px",
     headingSecondary: "56px",
+    headingTertiary: "40px",
     bodyXl: "34px",
     bodyLarge: "24px",
+    bodyML: "20px",
     bodyMedium: "16px",
     bodySmall: "14px",
   },

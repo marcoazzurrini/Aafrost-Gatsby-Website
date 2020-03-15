@@ -11,7 +11,7 @@ const MobileNav = styled.nav`
   position: fixed;
   bottom: 0;
   left: 0;
-  height: 80px;
+  height: 70px;
 
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
@@ -22,8 +22,8 @@ const MobileNav = styled.nav`
 `
 
 const MobileNavLink = styled.a`
-  width: ${props => props.theme.pm.pm200};
-  height: ${props => props.theme.pm.pm200};
+  width: 25px;
+  height: 25px;
   display: inline-block;
   text-decoration: none;
 `
@@ -31,21 +31,21 @@ const MobileNavLink = styled.a`
 export default function mobileNav() {
   return (
     <MobileNav>
-      <MobileNavLink>
+      <MobileNavLink href="#services">
         <Svg
           viewbox="0 0 20 20"
           fill="#127EB1"
-          path="M8 20H3V10H0L10 0l10 10h-3v10h-5v-6H8v6z"
+          path="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"
         />
       </MobileNavLink>
-      <MobileNavLink>
+      <MobileNavLink href="#about">
         <Svg
           viewbox="0 0 20 20"
           fill="#CACACA"
           path="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zM9 11v4h2V9H9v2zm0-6v2h2V5H9z"
         />
       </MobileNavLink>
-      <MobileNavLink>
+      <MobileNavLink href="#contact">
         <Svg
           viewbox="0 0 20 20"
           fill="#CACACA"

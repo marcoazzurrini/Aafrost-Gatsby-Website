@@ -7,6 +7,7 @@ var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
+    title: "AaFrost",
     siteUrl: `https://www.aafrost.co.uk/`,
   },
   plugins: [
@@ -25,7 +26,8 @@ module.exports = {
       },
     },
     `gatsby-plugin-offline`,
-    `gatsby-plugin-sitemap`,
+    `gatsby-plugin-advanced-sitemap`,
+    "gatsby-plugin-robots-txt",
   ],
   developMiddleware: app => {
     app.use(

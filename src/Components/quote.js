@@ -21,6 +21,11 @@ const QuoteHeader = styled.div`
   justify-content: flex-start;
   align-items: center;
   padding-bottom: ${props => props.theme.pm.pm100};
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    margin-top: ${props => props.theme.pm.pm100};
+  }
 `
 
 const QuoteTitle = styled.h3`

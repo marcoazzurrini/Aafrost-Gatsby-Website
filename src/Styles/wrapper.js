@@ -1,7 +1,7 @@
 import styled from "@emotion/styled"
 
 export const Wrapper = styled.div`
-  width: 90%;
+  width: 93%;
   max-width: ${props => props.theme.sizes.myWorkW};
   margin: auto;
 

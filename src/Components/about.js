@@ -6,6 +6,11 @@ import { SectionHero } from "../Styles/text"
 const About = styled.div`
   max-width: ${props => props.theme.sizes.aboutW};
   padding-top: ${props => props.theme.pm.pm500};
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    padding-top: ${props => props.theme.pm.pm300};
+  }
 `
 
 const AboutText = styled.p`
