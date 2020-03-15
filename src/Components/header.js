@@ -18,6 +18,7 @@ const Header = styled.div`
       props.theme.breakpoints.mobile}) {
     justify-content: center;
     align-items: flex-start;
+    margin-top: 0;
   }
 `
 
