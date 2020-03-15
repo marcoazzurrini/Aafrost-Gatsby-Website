@@ -1,6 +1,6 @@
 import React from "react"
 import styled from "@emotion/styled"
-import LogoImg from "../img/logo.png"
+import LogoImg from "../img/logo.svg"
 
 const Navbar = styled.nav`
   position: fixed;
@@ -29,7 +29,7 @@ const NavbarContent = styled.div`
 
 const Logo = styled.a`
   height: 100%;
-  max-height: 40px;
+  max-height: 55px;
   img {
     height: 100%;
   }
