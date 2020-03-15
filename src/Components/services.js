@@ -4,6 +4,8 @@ import { HeadingSecondary } from "../Styles/headers"
 import { SectionHero } from "../Styles/text"
 import EngineerSVG from "../img/engineer.svg"
 import SecuritySVG from "../img/security.svg"
+import HomeSettingsSVG from "../img/home-settings.svg"
+import FastSVG from "../img/fast.svg"
 
 const Services = styled.div`
   padding-top: ${props => props.theme.pm.pm500};
@@ -12,6 +14,15 @@ const Services = styled.div`
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
     padding-top: 0;
+  }
+`
+
+const Service = styled.div`
+  margin-bottom: ${props => props.theme.pm.pm400};
+
+  @media only screen and (max-width: ${props =>
+      props.theme.breakpoints.mobile}) {
+    margin-bottom: ${props => props.theme.pm.pm300};
   }
 `
 
@@ -25,6 +36,10 @@ const ServiceContent = styled.div`
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
     flex-direction: column;
+  }
+
+  &:last-of-type {
+    margin-bottom: ${props => props.theme.pm.pm300};
   }
 `
 const ServiceDescription = styled.p`
@@ -44,19 +59,6 @@ const ServiceDescription = styled.p`
   }
 `
 
-const ServiceDetails = styled.ul`
-  margin-bottom: ${props => props.theme.pm.pm500};
-  li {
-    margin-bottom: ${props => props.theme.pm.pm300};
-    color: ${props => props.theme.colors.grey400};
-  }
-
-  @media only screen and (max-width: ${props =>
-      props.theme.breakpoints.mobile}) {
-    margin-bottom: ${props => props.theme.pm.pm300};
-  }
-`
-
 const ServiceImage = styled.img`
   width: 40%;
 
@@ -69,59 +71,75 @@ const ServiceImage = styled.img`
 export default function services() {
   return (
     <Services id="services">
-      <HeadingSecondary>
-        Refrigeration <span>Services</span>
-      </HeadingSecondary>
-      <SectionHero>A collection of some my best projects.</SectionHero>
-      <ServiceContent>
-        <ServiceDescription>
-          <p>
-            This very website you're now watching. I wanted something fast and
-            with good SEO for my portfolio, so vanilla JS with SCSS seemed like
-            the best fit. The visual effect on.
-          </p>
-          <p>
-            This very website you're now watching. I wanted something fast and
-            with good SEO for my portfolio, so vanilla JS.
-          </p>
-        </ServiceDescription>
-        <ServiceImage src={EngineerSVG} alt="engineer" />
-      </ServiceContent>
+      <Service>
+        <HeadingSecondary>
+          Refrigeration <span>Services</span>
+        </HeadingSecondary>
+        <SectionHero>A collection of some my best projects.</SectionHero>
+        <ServiceContent>
+          <ServiceDescription>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS with SCSS seemed
+              like the best fit. The visual effect on.
+            </p>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS.
+            </p>
+          </ServiceDescription>
+          <ServiceImage src={EngineerSVG} alt="engineer" />
+        </ServiceContent>
+        <ServiceContent reverse>
+          <ServiceDescription reverse>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS with SCSS seemed
+              like the best fit. The visual effect on.
+            </p>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS.
+            </p>
+          </ServiceDescription>
+          <ServiceImage src={SecuritySVG} alt="engineer" />
+        </ServiceContent>
+      </Service>
 
-      <ServiceDetails>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-      </ServiceDetails>
-
-      <HeadingSecondary>
-        Air <span>Conditioning</span>
-      </HeadingSecondary>
-      <SectionHero>A collection of some my best projects.</SectionHero>
-      <ServiceContent reverse>
-        <ServiceDescription reverse>
-          <p>
-            This very website you're now watching. I wanted something fast and
-            with good SEO for my portfolio, so vanilla JS with SCSS seemed like
-            the best fit. The visual effect on.
-          </p>
-          <p>
-            This very website you're now watching. I wanted something fast and
-            with good SEO for my portfolio, so vanilla JS.
-          </p>
-        </ServiceDescription>
-        <ServiceImage reverse src={SecuritySVG} alt="security" />
-      </ServiceContent>
-
-      <ServiceDetails>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-        <li>This very website you're now watching. I wanted something fast.</li>
-      </ServiceDetails>
+      <Service>
+        <HeadingSecondary>
+          Air <span>Conditioning</span>
+        </HeadingSecondary>
+        <SectionHero>A collection of some my best projects.</SectionHero>
+        <ServiceContent>
+          <ServiceDescription>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS with SCSS seemed
+              like the best fit. The visual effect on.
+            </p>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS.
+            </p>
+          </ServiceDescription>
+          <ServiceImage reverse src={HomeSettingsSVG} alt="security" />
+        </ServiceContent>
+        <ServiceContent reverse>
+          <ServiceDescription reverse>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS with SCSS seemed
+              like the best fit. The visual effect on.
+            </p>
+            <p>
+              This very website you're now watching. I wanted something fast and
+              with good SEO for my portfolio, so vanilla JS.
+            </p>
+          </ServiceDescription>
+          <ServiceImage reverse src={FastSVG} alt="security" />
+        </ServiceContent>
+      </Service>
     </Services>
   )
 }
