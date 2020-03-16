@@ -16,7 +16,6 @@ export default () => (
   <ThemeProvider theme={theme}>
     <Global
       styles={css`
-        @import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@500&display=swap");
         * {
           margin: 0;
           padding: 0;

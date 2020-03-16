@@ -42,7 +42,7 @@ const ServiceContent = styled.div`
     margin-bottom: ${props => props.theme.pm.pm300};
   }
 `
-const ServiceDescription = styled.p`
+const ServiceDescription = styled.div`
   width: 60%;
   padding-right: ${props => (props.reverse ? 0 : props.theme.pm.pm400)};
   padding-left: ${props => (props.reverse ? props.theme.pm.pm400 : 0)};

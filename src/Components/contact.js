@@ -53,6 +53,7 @@ export default function contact() {
       <ContactSocial>
         <li>
           <SocialLinks
+            alt="facebook"
             href="https://www.facebook.com/AAFROSTLTD"
             rel="noreferrer"
             target="_blank"
@@ -67,6 +68,7 @@ export default function contact() {
         <li>
           <SocialLinks
             href="https://www.facebook.com/AAFROSTLTD"
+            alt="facebook"
             rel="noreferrer"
             target="_blank"
           >

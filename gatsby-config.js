@@ -37,6 +37,15 @@ module.exports = {
         enableImprovedAccessibility: false, // Optional. Sets aria-label attribute on pop-up icon for screen readers. Defaults to true.
       },
     },
+    {
+      resolve: "gatsby-plugin-web-font-loader",
+      options: {
+        custom: {
+          families: ["Libre Baskersville, Montserrat"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
+    },
   ],
   developMiddleware: app => {
     app.use(

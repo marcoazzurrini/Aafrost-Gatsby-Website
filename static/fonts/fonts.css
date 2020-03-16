@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("LibreBaskerville-Bold.otf");
+  src: url("LibreBaskerville-Regular.otf.otf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("Montserrat-Regular.otf");
+}
