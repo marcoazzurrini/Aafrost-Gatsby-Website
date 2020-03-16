@@ -1,6 +1,7 @@
 import React from "react"
 import styled from "@emotion/styled"
 import LogoImg from "../img/logo.svg"
+import PhoneSvg from "../img/phone.svg"
 
 const Navbar = styled.nav`
   position: fixed;
@@ -16,7 +17,10 @@ const Navbar = styled.nav`
     display: none;
   }
 `
-
+const Call = styled.img`
+  max-height: 30px;
+  transform: rotate(270deg);
+`
 const NavbarContent = styled.div`
   width: 90%;
   margin: auto;
@@ -71,6 +75,11 @@ export default function MainNav() {
           </NavbarMenuItem>
           <NavbarMenuItem>
             <NavbarMenuLink href="#contact">Contacts</NavbarMenuLink>
+          </NavbarMenuItem>
+          <NavbarMenuItem>
+            <NavbarMenuLink href="tel:07999997664">
+              <Call src={PhoneSvg} alt="call" />
+            </NavbarMenuLink>
           </NavbarMenuItem>
         </NavbarMenu>
       </NavbarContent>

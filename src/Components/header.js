@@ -73,7 +73,7 @@ export default function header() {
         <span> air-conditioning & refrigeration engineer.</span>
       </SectionHero>
       <BtnMedium href="#quote">Get a Quote</BtnMedium>
-      <ChevronDown href="#work">
+      <ChevronDown href="#services">
         <img src={Chevron} alt="scroll down" />
       </ChevronDown>
     </Header>
