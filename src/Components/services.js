@@ -75,7 +75,10 @@ export default function services() {
         <HeadingSecondary>
           Refrigeration <span>Services</span>
         </HeadingSecondary>
-        <SectionHero>A collection of some my best projects.</SectionHero>
+        <SectionHero>
+          Stress no more! Your refrigeration systems are finally in expert
+          hands.
+        </SectionHero>
         <ServiceContent>
           <ServiceDescription>
             <p>
@@ -122,7 +125,9 @@ export default function services() {
         <HeadingSecondary>
           Air <span>Conditioning</span>
         </HeadingSecondary>
-        <SectionHero>A collection of some my best projects.</SectionHero>
+        <SectionHero>
+          Get your setup up and working blazing fast with our 24/7 Engineers.
+        </SectionHero>
         <ServiceContent>
           <ServiceDescription>
             <p>

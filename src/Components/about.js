@@ -26,24 +26,26 @@ export default function about() {
       <HeadingSecondary>
         <span>About</span> Us
       </HeadingSecondary>
-      <SectionHero>Everything about me, myself and I.</SectionHero>
+      <SectionHero>AAFROST, from Londoners, to Londoners.</SectionHero>
       <AboutText>
-        This very website you're now watching. I wanted something fast and with
-        good SEO for my portfolio, so vanilla JS with SCSS seemed like the best
-        fit. The visual effect on the top right of the header is achieved via a
-        light library called animate.js, dynamically modifying a SVG file.{" "}
+        AAFROST is a contractor specialising in the design, supply,
+        installation, service and maintenance of commercial and industrial
+        refrigeration and air-conditioning systems, incorporating heat recovery
+        and energy conservation where possible.
       </AboutText>
       <AboutText>
-        This very website you're now watching. I wanted something fast and with
-        good SEO for my portfolio, so vanilla JS with SCSS seemed like the best
-        fit. The visual effect on the top right of the header is achieved via a
-        light library called animate.js, dynamically modifying a SVG file.{" "}
+        We’ve grown and developed significantly along the way and are proud to
+        be known for our energy efficient, quality innovative cooling solutions
+        and outstanding service to our industry
       </AboutText>
       <AboutText>
-        This very website you're now watching. I wanted something fast and with
-        good SEO for my portfolio, so vanilla JS with SCSS seemed like the best
-        fit. The visual effect on the top right of the header is achieved via a
-        light library called animate.js, dynamically modifying a SVG file.{" "}
+        We believe that by taking the time to understand the parameters and
+        requirements of any project helps NTM achieve the highest level of
+        service. Minimising disruption is a key factor. Having obtained an
+        understanding of the requirements and priorities, we carry out the works
+        to accommodate you day or night, weekday or weekend, accelerated to meet
+        business critical dates as and when required. Our aim is to consistently
+        deliver the highest quality on time and to an agreed budget.
       </AboutText>
     </About>
   )
