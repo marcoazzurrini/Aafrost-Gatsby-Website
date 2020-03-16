@@ -59,6 +59,9 @@ const QuoteInput = styled.input`
   display: inline-block;
   width: 45%;
 
+  &:first-of-type {
+    margin-right: 10%;
+  }
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
     width: 100%;
@@ -85,6 +88,13 @@ const QuoteTextArea = styled.textarea`
   }
 `
 
+const InvisibleLabel = styled.label`
+  visibility: hidden;
+  height: 0;
+  width: 0;
+  display: inline-block;
+`
+
 const Info = styled.img`
   width: ${props => props.theme.pm.pm200};
 `
@@ -98,9 +108,12 @@ export default function quote() {
       </QuoteHeader>
 
       <QuoteForm>
-        <QuoteInput placeholder="Your email address" />
-        <QuoteInput placeholder="Your telephone number" />
-        <QuoteTextArea placeholder="Message" />
+        <InvisibleLabel for="email">Email</InvisibleLabel>
+        <InvisibleLabel for="name">Name</InvisibleLabel>
+        <InvisibleLabel for="message">Message</InvisibleLabel>
+        <QuoteInput id="email" placeholder="Your email address" />
+        <QuoteInput id="name" placeholder="Your telephone number" />
+        <QuoteTextArea id="message" placeholder="Message" />
         <BtnMedium type="submit">Submit</BtnMedium>
       </QuoteForm>
     </Quote>
