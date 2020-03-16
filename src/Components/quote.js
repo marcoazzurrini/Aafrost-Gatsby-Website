@@ -108,9 +108,9 @@ export default function quote() {
       </QuoteHeader>
 
       <QuoteForm>
-        <InvisibleLabel for="email">Email</InvisibleLabel>
-        <InvisibleLabel for="name">Name</InvisibleLabel>
-        <InvisibleLabel for="message">Message</InvisibleLabel>
+        <InvisibleLabel htmlFor="email">Email</InvisibleLabel>
+        <InvisibleLabel htmlFor="name">Name</InvisibleLabel>
+        <InvisibleLabel htmlFor="message">Message</InvisibleLabel>
         <QuoteInput id="email" placeholder="Your email address" />
         <QuoteInput id="name" placeholder="Your telephone number" />
         <QuoteTextArea id="message" placeholder="Message" />
