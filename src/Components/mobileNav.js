@@ -1,10 +1,12 @@
 import React from "react"
+import Scrollspy from "react-scrollspy"
+import { jsx, css } from "@emotion/core"
 import styled from "@emotion/styled"
 import { Svg } from "../Styles/svg"
-
-const MobileNav = styled.nav`
+import { theme } from "../Styles/theme"
+const MobileNav = css`
   display: none;
-  padding: 0 ${props => props.theme.pm.pm200};
+  padding: 0 ${theme.pm.pm200};
   width: 100vw;
   background: #fff;
   box-shadow: 0 -8px 10px rgba(0, 0, 0, 0.15);
@@ -13,8 +15,10 @@ const MobileNav = styled.nav`
   left: 0;
   height: 70px;
 
-  @media only screen and (max-width: ${props =>
-      props.theme.breakpoints.mobile}) {
+  & .isCurrent svg {
+    fill: ${theme.colors.primary};
+  }
+  @media only screen and (max-width: ${theme.breakpoints.mobile}) {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,11 +34,16 @@ const MobileNavLink = styled.a`
 
 export default function mobileNav() {
   return (
-    <MobileNav>
+    <Scrollspy
+      offset={-100}
+      css={MobileNav}
+      items={["services", "about", "contact"]}
+      currentClassName="isCurrent"
+    >
       <MobileNavLink href="#services">
         <Svg
           viewbox="0 0 20 20"
-          fill="#127EB1"
+          fill="#CACACA"
           path="M9 12H1v6a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-6h-8v2H9v-2zm0-1H0V5c0-1.1.9-2 2-2h4V2a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v1h4a2 2 0 0 1 2 2v6h-9V9H9v2zm3-8V2H8v1h4z"
         />
       </MobileNavLink>
@@ -52,6 +61,6 @@ export default function mobileNav() {
           path="M18 2a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4c0-1.1.9-2 2-2h16zm-4.37 9.1L20 16v-2l-5.12-3.9L20 6V4l-10 8L0 4v2l5.12 4.1L0 14v2l6.37-4.9L10 14l3.63-2.9z"
         />
       </MobileNavLink>
-    </MobileNav>
+    </Scrollspy>
   )
 }

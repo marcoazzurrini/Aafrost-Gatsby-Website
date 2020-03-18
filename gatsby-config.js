@@ -3,7 +3,6 @@
  *
  * See: https://www.gatsbyjs.org/docs/gatsby-config/
  */
-var proxy = require("http-proxy-middleware")
 
 module.exports = {
   siteMetadata: {
@@ -47,15 +46,4 @@ module.exports = {
       },
     },
   ],
-  developMiddleware: app => {
-    app.use(
-      "/.netlify/functions/",
-      proxy({
-        target: "http://localhost:9000",
-        pathRewrite: {
-          "/.netlify/functions/": "",
-        },
-      })
-    )
-  },
 }

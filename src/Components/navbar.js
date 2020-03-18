@@ -1,4 +1,6 @@
 import React from "react"
+import Scrollspy from "react-scrollspy"
+import { jsx, css } from "@emotion/core"
 import styled from "@emotion/styled"
 import LogoImg from "../img/logo.svg"
 import PhoneSvg from "../img/phone.svg"
@@ -39,7 +41,7 @@ const Logo = styled.a`
   }
 `
 
-const NavbarMenu = styled.ul`
+const NavbarMenu = css`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -48,6 +50,10 @@ const NavbarMenu = styled.ul`
 const NavbarMenuItem = styled.li`
   margin-left: 1.5rem;
   cursor: pointer;
+
+  &.isCurrent {
+    font-weight: bold;
+  }
 `
 
 const NavbarMenuLink = styled.a`
@@ -64,7 +70,11 @@ export default function MainNav() {
         <Logo href="#header">
           <img src={LogoImg} alt="logo and scroll to top" />
         </Logo>
-        <NavbarMenu>
+        <Scrollspy
+          items={["services", "about", "contact"]}
+          currentClassName="isCurrent"
+          css={NavbarMenu}
+        >
           <NavbarMenuItem>
             <NavbarMenuLink href="#services" primary>
               Services
@@ -81,7 +91,7 @@ export default function MainNav() {
               <Call src={PhoneSvg} alt="call" />
             </NavbarMenuLink>
           </NavbarMenuItem>
-        </NavbarMenu>
+        </Scrollspy>
       </NavbarContent>
     </Navbar>
   )

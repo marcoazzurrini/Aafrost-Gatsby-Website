@@ -36,15 +36,11 @@ export default () => (
         p {
           font-weight: 400;
         }
-        h1 {
-          font-family: "LibreBaskervilleRegular", serif;
-        }
-        h1 span {
-          font-family: "LibreBaskervilleBold", serif;
-        }
+        h1,
         h2,
-        h3 {
-          font-family: "LibreBaskervilleBold", serif;
+        h3,
+        h4 {
+          font-family: "Libre Baskerville", serif;
         }
         ul {
           list-style: none;
