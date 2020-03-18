@@ -72,7 +72,9 @@ export default function header() {
         London's best,
         <span> air-conditioning & refrigeration engineer.</span>
       </SectionHero>
-      <BtnMedium href="#quote">Get a Quote</BtnMedium>
+      <a css={BtnMedium} href="#quote">
+        Get a Quote
+      </a>
       <ChevronDown href="#services">
         <img src={Chevron} alt="scroll down" />
       </ChevronDown>

@@ -114,7 +114,9 @@ export default function quote() {
         <QuoteInput id="email" placeholder="Your email address" />
         <QuoteInput id="name" placeholder="Your telephone number" />
         <QuoteTextArea id="message" placeholder="Message" />
-        <BtnMedium type="submit">Submit</BtnMedium>
+        <button css={BtnMedium} type="submit">
+          Submit
+        </button>
       </QuoteForm>
     </Quote>
   )
