@@ -110,6 +110,7 @@ export default function quote() {
       <QuoteForm
         name="quote"
         method="post"
+        action="/"
         data-netlify="true"
         data-netlify-honeypot="bot-field"
       >
@@ -118,9 +119,9 @@ export default function quote() {
         <InvisibleLabel htmlFor="email">Email</InvisibleLabel>
         <InvisibleLabel htmlFor="name">Name</InvisibleLabel>
         <InvisibleLabel htmlFor="message">Message</InvisibleLabel>
-        <QuoteInput id="email" placeholder="Your email address" />
-        <QuoteInput id="name" placeholder="Your telephone number" />
-        <QuoteTextArea id="message" placeholder="Message" />
+        <QuoteInput name="email" id="email" placeholder="Your email address" />
+        <QuoteInput id="name" name="name" placeholder="Your telephone number" />
+        <QuoteTextArea id="message" name="message" placeholder="Message" />
         <button css={BtnMedium} type="submit">
           Submit
         </button>

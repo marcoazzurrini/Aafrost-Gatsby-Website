@@ -49,7 +49,7 @@ export default function contact() {
       <ContactLinks href="mailto:Info@aafrost.co.uk">
         info@aafrost.co.uk
       </ContactLinks>
-      <ContactLinks href="tel:+447999997664">7999 997 664</ContactLinks>
+      <ContactLinks href="tel:+4402036337664">02036337664</ContactLinks>
       <ContactSocial>
         <li>
           <SocialLinks
