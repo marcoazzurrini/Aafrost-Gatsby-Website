@@ -1,12 +1,16 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
+import { jsx, css } from "@emotion/core"
+import { theme } from "../Styles/theme"
 import Chevron from "../img/chevronDown.png"
 import styled from "@emotion/styled"
 import { HeadingPrimary } from "../Styles/headers"
 import { SectionHero } from "../Styles/text"
 import { BtnMedium } from "../Styles/buttons"
 import LondonImage from "../img/london_skyline_diag.png"
+import Img from "gatsby-image"
 
-const Header = styled.div`
+const HeaderSection = styled.div`
   height: 100vh;
   width: 100%;
   display: flex;
@@ -42,23 +46,40 @@ const ChevronDown = styled.a`
   }
 `
 
-const HeaderImage = styled.img`
-  height: 80%;
+const HeaderImage = css`
+  width: 80%;
+  z-index: -1;
   position: absolute;
   top: 0;
   right: 0;
-  z-index: -1;
 
-  @media only screen and (max-width: ${props =>
-      props.theme.breakpoints.mobile}) {
-    height: 35%;
+  @media only screen and (max-width: ${theme.breakpoints.mobile}) {
+    width: 100%;
   }
 `
 
-export default function header() {
+const Header = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      imageOne: file(relativePath: { eq: "london_skyline_diag.png" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
+
   return (
-    <Header id="header">
-      <HeaderImage src={LondonImage} alt="london" />
+    <HeaderSection id="header">
+      <Img
+        fluid={data.imageOne.childImageSharp.fluid}
+        css={HeaderImage}
+        style={{ position: "absolute" }}
+        alt="london"
+      />
+
       <HeadingPrimary>
         Hello
         <span role="img" aria-label="peace sign">
@@ -78,6 +99,8 @@ export default function header() {
       <ChevronDown href="#services">
         <img src={Chevron} alt="scroll down" />
       </ChevronDown>
-    </Header>
+    </HeaderSection>
   )
 }
+
+export default Header

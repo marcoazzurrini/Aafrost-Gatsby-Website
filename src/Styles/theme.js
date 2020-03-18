@@ -3,8 +3,8 @@ export const theme = {
     primary: "#127EB1",
     white: "#fff",
     grey100: "#CACACA",
-    grey200: "#8A8A8A",
-    grey300: "#5B5B5B",
+    grey200: "#737373",
+    grey300: "#595959",
     grey400: "#32383A",
   },
   pm: {
