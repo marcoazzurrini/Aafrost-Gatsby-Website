@@ -107,7 +107,7 @@ export default function quote() {
         <QuoteTitle>Get a Quote</QuoteTitle>
       </QuoteHeader>
 
-      <QuoteForm>
+      <QuoteForm name="quote" netlify>
         <InvisibleLabel htmlFor="email">Email</InvisibleLabel>
         <InvisibleLabel htmlFor="name">Name</InvisibleLabel>
         <InvisibleLabel htmlFor="message">Message</InvisibleLabel>
