@@ -87,7 +87,7 @@ const Header = () => {
           ✌🏼
         </span>
         , <br />
-        We are <span>AaFrost</span>{" "}
+        We are <span>AAFROST</span>{" "}
       </HeadingPrimary>
       <SectionHero>
         London's best,
