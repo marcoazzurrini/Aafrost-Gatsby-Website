@@ -107,7 +107,14 @@ export default function quote() {
         <QuoteTitle>Get a Quote</QuoteTitle>
       </QuoteHeader>
 
-      <QuoteForm name="quote" netlify>
+      <QuoteForm
+        name="quote"
+        method="post"
+        data-netlify="true"
+        data-netlify-honeypot="bot-field"
+      >
+        <input type="hidden" name="bot-field" />
+        <input type="hidden" name="form-name" value="quote" />
         <InvisibleLabel htmlFor="email">Email</InvisibleLabel>
         <InvisibleLabel htmlFor="name">Name</InvisibleLabel>
         <InvisibleLabel htmlFor="message">Message</InvisibleLabel>
