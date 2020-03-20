@@ -46,7 +46,8 @@ const ChevronDown = styled.a`
 `
 
 const HeaderImage = css`
-  width: 80%;
+  width: 70%;
+  max-width: 1350px;
   z-index: -1;
   position: absolute;
   top: 0;

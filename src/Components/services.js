@@ -60,7 +60,7 @@ const ServiceDescription = styled.div`
 
 const ServiceImage = css`
   width: 40%;
-
+  box-shadow: 2px 6px 8px rgba(0, 0, 0, 0.18);
   @media only screen and (max-width: ${theme.breakpoints.mobile}) {
     width: 100%;
     margin: ${theme.pm.pm300} 0;
