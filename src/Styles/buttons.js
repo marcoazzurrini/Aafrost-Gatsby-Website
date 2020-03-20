@@ -1,4 +1,4 @@
-import { jsx, css } from "@emotion/core"
+import { css } from "@emotion/core"
 import { theme } from "./theme"
 
 export const BtnMedium = css`

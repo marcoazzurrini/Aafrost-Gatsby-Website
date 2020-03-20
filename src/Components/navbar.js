@@ -1,6 +1,6 @@
 import React from "react"
 import Scrollspy from "react-scrollspy"
-import { jsx, css } from "@emotion/core"
+import { css } from "@emotion/core"
 import styled from "@emotion/styled"
 import LogoImg from "../img/logo.svg"
 import PhoneSvg from "../img/phone.svg"

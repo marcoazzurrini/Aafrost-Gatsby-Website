@@ -1,13 +1,12 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-import { jsx, css } from "@emotion/core"
+import { css } from "@emotion/core"
 import { theme } from "../Styles/theme"
 import Chevron from "../img/chevronDown.png"
 import styled from "@emotion/styled"
 import { HeadingPrimary } from "../Styles/headers"
 import { SectionHero } from "../Styles/text"
 import { BtnMedium } from "../Styles/buttons"
-import LondonImage from "../img/london_skyline_diag.png"
 import Img from "gatsby-image"
 
 const HeaderSection = styled.div`

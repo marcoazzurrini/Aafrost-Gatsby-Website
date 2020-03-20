@@ -1,13 +1,13 @@
 import React from "react"
 import styled from "@emotion/styled"
+import { theme } from "../Styles/theme"
+import { useStaticQuery, graphql } from "gatsby"
+import { css } from "@emotion/core"
 import { HeadingSecondary } from "../Styles/headers"
 import { SectionHero } from "../Styles/text"
-import EngineerSVG from "../img/engineer.svg"
-import SecuritySVG from "../img/security.svg"
-import HomeSettingsSVG from "../img/home-settings.svg"
-import FastSVG from "../img/fast.svg"
 
-const Services = styled.div`
+import Img from "gatsby-image"
+const ServicesContainer = styled.div`
   padding-top: ${props => props.theme.pm.pm500};
   width: 100%;
 
@@ -32,14 +32,13 @@ const ServiceContent = styled.div`
   align-items: center;
   flex-direction: ${props => (props.reverse ? "row-reverse" : "row")};
   margin-bottom: ${props => props.theme.pm.pm300};
-
+  &:last-of-type {
+    margin-bottom: ${props => props.theme.pm.pm300};
+  }
   @media only screen and (max-width: ${props =>
       props.theme.breakpoints.mobile}) {
     flex-direction: column;
-  }
-
-  &:last-of-type {
-    margin-bottom: ${props => props.theme.pm.pm300};
+    margin-bottom: 0;
   }
 `
 const ServiceDescription = styled.div`
@@ -59,18 +58,50 @@ const ServiceDescription = styled.div`
   }
 `
 
-const ServiceImage = styled.img`
+const ServiceImage = css`
   width: 40%;
 
-  @media only screen and (max-width: ${props =>
-      props.theme.breakpoints.mobile}) {
+  @media only screen and (max-width: ${theme.breakpoints.mobile}) {
     width: 100%;
+    margin: ${theme.pm.pm300} 0;
   }
 `
 
-export default function services() {
+export default function Services() {
+  const data = useStaticQuery(graphql`
+    query {
+      aerial: file(relativePath: { eq: "aerial.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      ventilation: file(relativePath: { eq: "ventilation.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      buildings: file(relativePath: { eq: "buildings.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+      mountains: file(relativePath: { eq: "mountains.jpg" }) {
+        childImageSharp {
+          fluid(quality: 100) {
+            ...GatsbyImageSharpFluid_withWebp
+          }
+        }
+      }
+    }
+  `)
   return (
-    <Services id="services">
+    <ServicesContainer id="services">
       <Service>
         <HeadingSecondary>
           Refrigeration <span>Services</span>
@@ -97,7 +128,11 @@ export default function services() {
               budget.
             </p>
           </ServiceDescription>
-          <ServiceImage src={EngineerSVG} alt="engineer" />
+          <Img
+            css={ServiceImage}
+            fluid={data.aerial.childImageSharp.fluid}
+            alt="engineer"
+          />
         </ServiceContent>
         <ServiceContent reverse>
           <ServiceDescription reverse>
@@ -117,7 +152,11 @@ export default function services() {
               time of within 4 hours.
             </p>
           </ServiceDescription>
-          <ServiceImage src={SecuritySVG} alt="engineer" />
+          <Img
+            css={ServiceImage}
+            fluid={data.mountains.childImageSharp.fluid}
+            alt="engineer"
+          />
         </ServiceContent>
       </Service>
 
@@ -147,7 +186,12 @@ export default function services() {
               obvious choice for temperature control of buildings.
             </p>
           </ServiceDescription>
-          <ServiceImage reverse src={HomeSettingsSVG} alt="security" />
+          <Img
+            css={ServiceImage}
+            reverse
+            fluid={data.mountains.childImageSharp.fluid}
+            alt="security"
+          />
         </ServiceContent>
         <ServiceContent reverse>
           <ServiceDescription reverse>
@@ -164,9 +208,14 @@ export default function services() {
               solution for your application.
             </p>
           </ServiceDescription>
-          <ServiceImage reverse src={FastSVG} alt="security" />
+          <Img
+            css={ServiceImage}
+            reverse
+            fluid={data.buildings.childImageSharp.fluid}
+            alt="security"
+          />
         </ServiceContent>
       </Service>
-    </Services>
+    </ServicesContainer>
   )
 }
