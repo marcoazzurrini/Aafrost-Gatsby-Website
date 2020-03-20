@@ -11,7 +11,7 @@ import { Global, css } from "@emotion/core"
 import { ThemeProvider } from "emotion-theming"
 import { theme } from "../Styles/theme"
 import { Wrapper } from "../Styles/wrapper"
-
+import { Messenger } from "../Components/messengerChat"
 export default () => (
   <ThemeProvider theme={theme}>
     <Global
@@ -51,6 +51,7 @@ export default () => (
       `}
     />
     <Wrapper>
+      <Messenger />
       <Helmet />
       <MobileNav />
       <MainNav />
